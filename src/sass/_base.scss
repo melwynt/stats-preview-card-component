@@ -11,6 +11,10 @@
 
 $color-bg: var(--color-main-bg);
 
+$bp-M: 62em; // 992px (1em = 16px)
+$bp-S: 53.125em; // 850px (1em = 16px)
+$bp-XS: 48em; // 768px (1em = 16px)
+
 * {
   margin: 0;
   padding: 0;
@@ -28,19 +32,20 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif; // Lexend Deca
-  min-height: 100vh;
-
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-main-bg);
+  color: var(--color-main-paragraph);
   font-size: 1.5rem;
-  font-weight: 400;
-  color: var(--color-white);
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 main {
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  min-height: 100vh;
 }
