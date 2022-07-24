@@ -1,0 +1,51 @@
+:root {
+  --color-main-bg: hsl(233, 47%, 7%);
+  --color-card-bg: hsl(244, 38%, 16%);
+  --color-grey: rgba(122, 120, 141, 1);
+  --color-soft-violet: hsl(277, 64%, 61%);
+
+  --color-white: hsl(0, 0%, 100%);
+  --color-main-paragraph: hsla(0, 0%, 100%, 0.75);
+  --color-stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+$color-bg: var(--color-main-bg);
+
+$bp-M: 62em; // 992px (1em = 16px)
+$bp-S: 53.125em; // 850px (1em = 16px)
+$bp-XS: 48em; // 768px (1em = 16px)
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-main-bg);
+  color: var(--color-main-paragraph);
+  font-size: 1.5rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

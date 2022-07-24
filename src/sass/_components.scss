@@ -1,0 +1,136 @@
+@use 'base';
+
+.stats-card {
+  background-color: var(--color-card-bg);
+  display: flex;
+  width: 111rem;
+  border-radius: 0.8rem;
+  overflow: hidden;
+
+  @media screen and (max-width: base.$bp-M) {
+    width: 95%;
+  }
+
+  @media screen and (max-width: base.$bp-XS) {
+    flex-direction: column-reverse;
+    width: 87%;
+  }
+
+  &__hero-img {
+    flex-basis: 50%;
+    flex-shrink: 1;
+    position: relative;
+    background-color: var(--color-soft-violet);
+
+    img {
+      mix-blend-mode: multiply;
+      opacity: 0.75;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      // content: url('../../images/image-header-desktop.jpg');
+
+      @media screen and (max-width: base.$bp-XS) {
+        content: url('../../images/image-header-mobile.jpg');
+      }
+    }
+  }
+
+  &__hero-info {
+    flex-basis: 52.3%;
+    flex-shrink: 1;
+    padding: 7.1rem 11rem 6.4rem 7.2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @media screen and (max-width: base.$bp-M) {
+      padding: 4rem;
+    }
+
+    @media screen and (max-width: base.$bp-S) {
+      padding: 2rem;
+    }
+
+    @media screen and (max-width: base.$bp-XS) {
+      padding: 4rem 3.3rem 4rem 3.3rem;
+    }
+
+    &__description {
+      h1 {
+        color: var(--color-white);
+        font-size: 3.6rem;
+        margin-bottom: 2.5rem;
+
+        @media screen and (max-width: base.$bp-M) {
+          font-size: 3.4rem;
+        }
+
+        @media screen and (max-width: base.$bp-XS) {
+          font-size: 2.8rem;
+          margin-bottom: 1rem;
+        }
+
+        span {
+          color: var(--color-soft-violet);
+        }
+      }
+
+      p {
+        line-height: 2.5rem;
+
+        @media screen and (max-width: base.$bp-S) {
+          font-size: 1.5rem;
+        }
+      }
+
+      h1,
+      p {
+        @media screen and (max-width: base.$bp-XS) {
+          text-align: center;
+        }
+      }
+    }
+
+    &__data {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding-right: 3.8rem;
+
+      @media screen and (max-width: base.$bp-XS) {
+        flex-direction: column;
+        min-height: 20rem;
+        margin-top: 2rem;
+        padding: 0;
+      }
+
+      div p {
+        &:nth-child(1) {
+          font-weight: bold;
+          font-size: 2.4rem;
+          color: var(--color-white);
+
+          @media screen and (max-width: base.$bp-S) {
+            font-size: 2rem;
+          }
+
+          @media screen and (max-width: base.$bp-XS) {
+            text-align: center;
+          }
+        }
+
+        &:nth-child(2) {
+          font-family: 'Lexend Deca', sans-serif;
+          font-size: 1.2rem;
+          letter-spacing: 0.09rem;
+          text-transform: uppercase;
+          margin-top: 0.7rem;
+          color: var(--color-stat-headings);
+        }
+      }
+    }
+  }
+}
